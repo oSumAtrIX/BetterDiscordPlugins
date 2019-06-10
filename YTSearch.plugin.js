@@ -15,11 +15,13 @@ class YTSearch {
     }
    
     getSettingsPanel() {
-  return `<input type=text placeholder="API Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
+        return `
+        <input type=text placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">
+        `;
     }
     
     onSwitch(){
-        //CREATE AN API KEY HERE: https://console.cloud.google.com/apis/library/youtube.googleapis.com
+        var apiKey;
     	var textArea =  document.getElementsByClassName('textArea-2Spzkt')[0];
         textArea.addEventListener('keyup', function(event) {
             event.preventDefault();  

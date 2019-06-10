@@ -40,7 +40,7 @@ class VoiceMessage {
                     });
                     btn.addEventListener("mouseup", function() {
                         btn.style.filter = "brightness(0.5)";
-                        setTimeout(mediaRecorder.stop(), 200)
+                        setTimeout(()=>mediaRecorder.stop(), 200)
                     });
                     mediaRecorder.onstop = function(e) {
                         BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(BdApi.findModuleByProps("getChannelId").getChannelId(), [new File(chunks, "Voice Message.mp3")]);

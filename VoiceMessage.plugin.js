@@ -18,15 +18,22 @@ class VoiceMessage {
     start() { }
 
     stop() {
-
+    	
     }
     onSwitch() {
-        const btn = document.createElement("button");
-        btn.style.background = "url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTEyIDE0YzEuNjYgMCAyLjk5LTEuMzQgMi45OS0zTDE1IDVjMC0xLjY2LTEuMzQtMy0zLTNTOSAzLjM0IDkgNXY2YzAgMS42NiAxLjM0IDMgMyAzem01LjMtM2MwIDMtMi41NCA1LjEtNS4zIDUuMVM2LjcgMTQgNi43IDExSDVjMCAzLjQxIDIuNzIgNi4yMyA2IDYuNzJWMjFoMnYtMy4yOGMzLjI4LS40OCA2LTMuMyA2LTYuNzJoLTEuN3oiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==)";
-        btn.style.backgroundRepeat = "no-repeat";
-        btn.style.backgroundPosition = "center";
-        btn.style.filter = "brightness(0.5)";
-        btn.className = "recordAudio";
+    	if (document.getElementsByClassName("ghost-button-wrapper").length == 0) {
+        var daButtons = document.getElementsByClassName("buttons-205you")[0], ghostButton = document.createElement("button"), btnInner = document.createElement("div"), btn = document.createElement("img");
+        ghostButton.setAttribute("type", "button");
+        ghostButton.setAttribute("class", "buttonWrapper-1ZmCpA da-buttonWrapper button-38aScr da-button lookBlank-3eh9lL da-lookBlank colorBrand-3pXr91 da-colorBrand grow-q77ONN da-grow normal ghost-button-wrapper");
+        btn.setAttribute("src", "https://discordapp.com/assets/4bc527c257233fc69b94342d77bcb9ee.svg");
+        btn.setAttribute("class", "icon-3D60ES da-icon");
+        btn.setAttribute("width", "22");
+        btn.setAttribute("height", "22");
+        btnInner.setAttribute("class", "contents-18-Yxp da-contents button-3AYNKb da-button button-2vd_v_ da-button ghost-button-inner");
+        btnInner.appendChild(btn);
+        ghostButton.appendChild(btnInner);
+        daButtons.insertBefore(ghostButton, daButtons.firstChild);
+
         if (navigator.mediaDevices) {
             navigator.mediaDevices.getUserMedia({
                     audio: true
@@ -51,6 +58,7 @@ class VoiceMessage {
                     }
                 })
         };
+        }
         if (!document.getElementsByClassName(btn.className)[0]) {
             document.querySelector(".buttons-205you").appendChild(btn);
         }

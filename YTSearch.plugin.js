@@ -15,10 +15,10 @@ class YTSearch {
     }
         getSettingsPanel() {
   return `
-  <input type=text value="AIzaSyBKXu9WHP5-OM9Q_xE_x4z7oJvEu7bxzss" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
+  <input type=text value="" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
     }
     onSwitch(){
-        var apiKey = 'AIzaSyBKXu9WHP5-OM9Q_xE_x4z7oJvEu7bxzss',
+        var apiKey = '',
     	textArea =  document.getElementsByClassName('textArea-2Spzkt')[0];
         textArea.addEventListener('keyup', function(event) {
             event.preventDefault();  

@@ -13,17 +13,17 @@ class YTSearch {
     getAuthor() {
         return "oSumAtrIX";
     }
-        getSettingsPanel() {
-  return `
-  <input type=text value="" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
+    getSettingsPanel() {
+        return `
+  <input type=text value="AIzaSyCYlcp6DR1TADPP6BKhBVWqkga9L_9ivBA" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
     }
-    onSwitch(){
+    onSwitch() {
         var apiKey = '',
-    	textArea =  document.getElementsByClassName('textArea-2Spzkt')[0];
+            textArea = document.getElementsByClassName('textArea-2Spzkt')[0];
         textArea.addEventListener('keyup', function(event) {
-            event.preventDefault();  
-            var content = textArea.value;
             if (event.keyCode === 13) {
+                event.preventDefault();
+                var content = textArea.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes[0].textContent;
                 if (content.substring(0, 3).includes('yt ')) {
                     $.getJSON('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=' + encodeURIComponent(content.substring(3, content.length)) + '&type=video&key=' + apiKey, function(data) {
                         BdApi.findModuleByProps("sendMessage").sendMessage(BdApi.findModuleByProps("getChannelId").getChannelId(), {

@@ -15,7 +15,7 @@ class YTSearch {
     }
     getSettingsPanel() {
         return `
-  <input type=text value="AIzaSyCYlcp6DR1TADPP6BKhBVWqkga9L_9ivBA" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
+  <input type=text value="" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
     }
     onSwitch() {
         var apiKey = '',

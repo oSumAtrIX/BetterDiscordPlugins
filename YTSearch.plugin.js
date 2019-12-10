@@ -13,19 +13,18 @@ class YTSearch {
     getAuthor() {
         return "oSumAtrIX";
     }
-    getSettingsPanel() {
-        return `
-  <input type=text value="" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
+        getSettingsPanel() {
+  return `
+  <input type=text value="urapikey" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData("YTSearch", "apiKey", this.value)">`;
     }
-    onSwitch() {
+    onSwitch(){
         var apiKey = '',
-            textArea = document.getElementsByClassName('textArea-2Spzkt')[0];
+    	textArea =  document.getElementsByClassName('markup-2BOw-j slateTextArea-1bp44y')[0];
         textArea.addEventListener('keyup', function(event) {
+            event.preventDefault(); 
             if (event.keyCode === 13) {
-                event.preventDefault();
-                var content = textArea.childNodes[0].childNodes[0].childNodes[0].childNodes[0].childNodes[0].textContent;
-                if (content.substring(0, 3).includes('yt ')) {
-                    $.getJSON('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=' + encodeURIComponent(content.substring(3, content.length)) + '&type=video&key=' + apiKey, function(data) {
+                if (textArea.textContent.substring(0, 3).includes('yt ')) {
+                    $.getJSON('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=' + encodeURIComponent(textArea.textContent.substring(3, textArea.textContent.length)) + '&type=video&key=' + apiKey, function(data) {
                         BdApi.findModuleByProps("sendMessage").sendMessage(BdApi.findModuleByProps("getChannelId").getChannelId(), {
                             content: 'https://www.youtube.com/watch?v=' + data.items[0].id.videoId
                         });

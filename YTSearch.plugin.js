@@ -19,7 +19,7 @@ class YTSearch {
     }
     onSwitch(){
         var apiKey = '',
-    	textArea =  document.getElementsByClassName('markup-2BOw-j slateTextArea-1bp44y')[0];
+    	textArea =  document.getElementsByClassName('textAreaEnabled-3vQ5WZ textArea-2Spzkt textArea-2Spzkt scrollbarGhostHairline-1mSOM1 scrollbar-3dvm_9')[0];
         textArea.addEventListener('keyup', function(event) {
             event.preventDefault(); 
             if (event.keyCode === 13) {

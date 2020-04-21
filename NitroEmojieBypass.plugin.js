@@ -33,7 +33,7 @@ class NitroEmojieBypass {
                         scroller[0].onclick = (e) => {
                             var target = e.target;
                             if (target.classList.contains("disabled-1H1CfW")) {
-                                var img = target.style.backgroundImage.slice(4, -1).replace(/"/g, "");
+                                var img = document.getElementsByClassName("infoBarEmoji-3Ab8rZ")[0].style.backgroundImage.slice(4, -1).replace(/"/g, "");
                                 var split = img.split('.')
                                 fetch(img + "&size=40")
                                     .then(res => res.blob())

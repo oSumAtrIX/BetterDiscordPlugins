@@ -8,7 +8,7 @@ class YTSearch {
         return "Send Youtube Videos by pressing [SHIFT]+[ENTER] while using the following syntax: 'yt [searchterm]'";
     }
     getVersion() {
-        return "0.0.1";
+        return "2.0";
     }
     getAuthor() {
         return "oSumAtrIX";

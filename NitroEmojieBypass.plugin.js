@@ -23,29 +23,27 @@ class NitroEmojieBypass {
 
     }
     onSwitch() {
-        var btn = document.getElementsByClassName("emojiButtonNormal-TdumYh emojiButton-3uL3Aw button-318s1X button-38aScr lookBlank-3eh9lL colorBrand-3pXr91 grow-q77ONN noFocus-2C7BQj");
-        if (btn.length > 0) {
-            btn[0].onclick = () => {
+        var btn = $(".buttonContainer-28fw2U")[1];
+        if (btn != null)
+            btn.onclick = () => {
                 var checkExist = setInterval(function() {
-                    var scroller = document.getElementsByClassName("scroller-2FKFPG systemPad-3UxEGl scroller-3vODG7");
-                    if (scroller.length) {
-                        clearInterval(checkExist);
-                        scroller[0].onclick = (e) => {
-                            var target = e.target;
-                            if (target.classList.contains("disabled-1H1CfW")) {
-                                var img = document.getElementsByClassName("infoBarEmoji-3Ab8rZ")[0].style.backgroundImage.slice(4, -1).replace(/"/g, "");
-                                var split = img.split('.')
-                                fetch(img + "&size=40")
-                                    .then(res => res.blob())
-                                    .then(blob => {
-                                        BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(BdApi.findModuleByProps("getChannelId").getChannelId(), [new File([blob], 'nitro.' + split[split.length - 1].split('?')[0], blob)]);
-                                    })
-                            }
+                    var scroller = $(".listItems-1uJgMC")[0];
+                    if (scroller == null) return;
+                    clearInterval(checkExist);
+                    scroller.parentElement.onclick = (e) => {
+                        var target = e.target;
+                        if (target.classList.contains("emojiItemDisabled-1FvFuF")) {
+                            var img = target.children[0].src.slice(0, -4);
+                            fetch(img + "?size=40")
+                                .then(res => res.blob())
+                                .then(blob => {
+                                    var split = img.split('.');
+                                    BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(BdApi.findModuleByProps("getChannelId").getChannelId(), [new File([blob], 'oSumAtrIX.' + split[split.length - 1].split('?')[0], blob)]);
+                                })
                         }
                     }
                 }, 100);
             }
-        }
     }
 
 }

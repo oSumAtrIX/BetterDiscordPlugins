@@ -1,13 +1,13 @@
-//META{"name":"NitroEmojieBypass","source":"https://github.com/oSumAtrIX/BetterDiscordPlugins","website":"https://github.com/oSumAtrIX"}*//
-class NitroEmojieBypass {
+//META{"name":"NitroEmoteBypass","source":"https://github.com/oSumAtrIX/BetterDiscordPlugins","website":"https://github.com/oSumAtrIX"}*//
+class NitroEmoteBypass {
     getName() {
-        return "NitroEmojieBypass";
+        return "NitroEmoteBypass";
     }
     getDescription() {
         return "Send Nitro emojies without Nitro (lame bypass)";
     }
     getVersion() {
-        return "1.0";
+        return "2.0";
     }
     getAuthor() {
         return "oSumAtrIX";
@@ -16,7 +16,9 @@ class NitroEmojieBypass {
 
     }
     start() {
-
+        var style = document.createElement('style');
+        style.innerHTML = ".emojiItemDisabled-1FvFuF {filter: none;}";
+        document.head.appendChild(style);
     }
 
     stop() {
@@ -29,11 +31,12 @@ class NitroEmojieBypass {
                 var checkExist = setInterval(function() {
                     var scroller = $(".listItems-1uJgMC")[0];
                     if (scroller == null) return;
+
                     clearInterval(checkExist);
                     scroller.parentElement.onclick = (e) => {
                         var target = e.target;
                         if (target.classList.contains("emojiItemDisabled-1FvFuF")) {
-                            var img = target.children[0].src.slice(0, -4);
+                            var img = target.firstChild.src.slice(0, -4);
                             fetch(img + "?size=40")
                                 .then(res => res.blob())
                                 .then(blob => {

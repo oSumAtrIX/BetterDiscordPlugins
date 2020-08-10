@@ -16,11 +16,11 @@ class NitroEmoteAndScreenShareBypass {
 
     }
     start() {
-        var currentUserModule = BdApi.findModule("getCurrentUser");
+    	var mod = BdApi.findModule("getCurrentUser");
         var checkExist = setInterval(function() {
-            var cUser = currentUserModule.getCurrentUser();
+            var cUser = mod.getCurrentUser();
             if (cUser == undefined) return;
-            cUser.premiumType = 2;
+             cUser.premiumType = 2;
             clearInterval(checkExist);
         }, 500);
     }

@@ -16,7 +16,7 @@ class NitroEmoteAndScreenShareBypass {
 
     }
     start() {
-    	var mod = BdApi.findModule("getCurrentUser");
+    	var mod = ZeresPluginLibrary.DiscordModules.UserStore;
         var checkExist = setInterval(function() {
             var cUser = mod.getCurrentUser();
             if (cUser == undefined) return;

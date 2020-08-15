@@ -7,7 +7,7 @@ class NitroEmoteAndScreenShareBypass {
         return "Send Nitro emojies without Nitro (lame bypass) and enable high quality screen sharing";
     }
     getVersion() {
-        return "3.0";
+        return "3.1";
     }
     getAuthor() {
         return "oSumAtrIX";
@@ -16,11 +16,11 @@ class NitroEmoteAndScreenShareBypass {
 
     }
     start() {
-    	var mod = ZeresPluginLibrary.DiscordModules.UserStore;
-        var checkExist = setInterval(function() {
-            var cUser = mod.getCurrentUser();
+        const mod = ZeresPluginLibrary.DiscordModules.UserStore;
+        const checkExist = setInterval(() => {
+            const cUser = mod.getCurrentUser();
             if (cUser == undefined) return;
-             cUser.premiumType = 2;
+            cUser.premiumType = 2;
             clearInterval(checkExist);
         }, 500);
     }
@@ -28,30 +28,36 @@ class NitroEmoteAndScreenShareBypass {
     stop() {
 
     }
+
     onSwitch() {
-        var div = document.getElementsByClassName("name-3YKhmS")[0];
-        var serverName = div != undefined ? div.innerHTML : "noServer";
-        var btn = $(".buttonContainer-28fw2U")[1];
+        const useFileUpload = true;
+        const div = document.getElementsByClassName("name-3YKhmS")[0];
+        const serverName = div != undefined ? div.innerHTML : "noServer";
+        const btn = $(".buttonContainer-28fw2U")[1];
         if (btn != null)
             btn.onclick = () => {
-                var checkExist = setInterval(function() {
-                    var scroller = $(".listItems-1uJgMC")[0];
+                const checkExist = setInterval(function() {
+                    const scroller = $(".listItems-1uJgMC")[0];
                     if (scroller == null) return;
 
                     clearInterval(checkExist);
                     scroller.parentElement.onclick = (e) => {
-                        var target = e.target;
-                        var src = target.firstChild.src;
+                        const target = e.target;
+                        const src = target.firstChild.src;
                         if (src.slice(-7, -4) == "gif" || target.parentElement.parentElement.children[0].firstChild.children[1].innerHTML != serverName) {
-                            fetch(src.slice(0, -4) + "?size=40")
-                                .then(res => res.blob())
-                                .then(blob => {
-                                    BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(BdApi.findModuleByProps("getChannelId").getChannelId(), [new File([blob], 'oSumAtrIX.gif', blob)]);
-                                })
+                            const curChannel = BdApi.findModuleByProps("getLastSelectedChannelId").getChannelId();
+                            const url = src.slice(0, -4) + "?size=40";
+                            useFileUpload ?
+                                fetch(url)
+                                .then(res => res.blob()).then(blob => {
+                                    BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(curChannel, [new File([blob], 'oSumAtrIX.gif', blob)]);
+                                }) :
+                                BdApi.findModuleByProps("sendMessage").sendMessage(curChannel, {
+                                    content: url
+                                });
                         }
                     }
                 }, 100);
             }
     }
-
 }

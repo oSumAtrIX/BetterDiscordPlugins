@@ -7,16 +7,17 @@ class YTSearch {
         return "Send Youtube Videos by pressing [SHIFT]+[ENTER] while using the following syntax: 'yt [searchterm]'";
     }
     getVersion() {
-        return "2.1";
+        return "2.2";
     }
     getAuthor() {
         return "oSumAtrIX";
     }
-
     getKey() {return BdApi.getData('YTSearch', 'apiKey')}
     getSettingsPanel() {
     	const key = this.getKey();
-        return `<input name="apiKey" type=text value="` + (key == undefined ? "" : key) + `" placeholder="YouTube Data API v3 Key" onChange="BdApi.setData('YTSearch', 'apiKey', this.value)">`;
+        return `<input type="password" class="inputDefault-_djjkz input-cIJ7To" name="apiKey" type=text value="` + (key == undefined ? "" : key) + `" placeholder="YouTube Data API v3 Key" onChange="key = this.value; BdApi.setData('YTSearch', 'apiKey', this.value)">
+<br><a target="_blank" href="https://console.developers.google.com/apis/library/youtube.googleapis.com?q=youtube">Get it here</a>
+        `;
     }
     onSwitch() {
         const doc = $(".textArea-12jD-V")[0], key = this.getKey();

@@ -37,13 +37,15 @@ class NitroEmoteAndScreenShareBypass {
                     scroller.parentElement.onclick = (e) => {
                         const target = e.target;
                         const src = target.firstChild.src;
-                        if (src.slice(-7, -4) == "gif" || target.parentElement.parentElement.children[0].firstChild.children[1].innerHTML != serverName) {
+			const ext = src.slice(-7, -4);
+			    
+                        if (ext == "gif" || target.parentElement.parentElement.children[0].firstChild.children[1].innerHTML != serverName) {
                             const curChannel = BdApi.findModuleByProps("getLastSelectedChannelId").getChannelId();
                             const url = src.slice(0, -4) + "?size=40";
                             useFileUpload ?
                                 fetch(url)
                                 .then(res => res.blob()).then(blob => {
-                                    BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(curChannel, [new File([blob], 'oSumAtrIX.gif', blob)]);
+                                    BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(curChannel, [new File([blob], 'oSumAtrIX.'+ext, blob)]);
                                 }) :
                                 BdApi.findModuleByProps("sendMessage").sendMessage(curChannel, {
                                     content: url

@@ -12,7 +12,8 @@ class NitroEmoteAndScreenShareBypass {
     getAuthor() {
         return "oSumAtrIX";
     }
-
+    stop() {}
+	
     start() {
         const checkExist = setInterval(() => {	
     		for (const mdl of Object.values(webpackJsonp.push([[],{['']:(_,e,r)=>{e.cache=r.c}},[['']]]).cache)) {

@@ -5,7 +5,7 @@ First encounter with js?
 
 >Better Emotes plugin: https://github.com/An00nymushun/DiscordFreeEmojis
 
-Discord: oSumAtrIX#7490
+Discord: oSumAtrIX#6832
 
 # How to use the plugins
 1. Get [Better-](https://enhanceddiscord.com) or [Enhanced Discord](https://betterdiscord.net/) and install it

@@ -90,7 +90,7 @@ class NitroEmoteAndScreenShareBypass {
                                     ctx = canvas.getContext('2d');
                                 canvas.width = img.width() + width + 10;
                                 canvas.crossOrigin = "Anonymous";
-                                canvas.height = img.height();
+                                canvas.height = 20;
                                 ctx.drawImage(img.get(0), 0, 0);
                                 ctx.font = "16px Whitney";
                                 ctx.clearRect(0, 0, canvas.width, canvas.height);

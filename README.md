@@ -1,5 +1,5 @@
 # BetterDiscordPlugins
-First encounter with js?
+Proof of concept only, use below plugins
 
 >Better VoiceMessage plugin: https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord
 

@@ -27,6 +27,9 @@ class NitroEmoteAndScreenShareBypass {
                         ['']
                     ]
                 ]).cache)) {
+            	if (mdl.exports == undefined) 
+            		continue;
+            	
                 const d = mdl.exports.default;
                 if (d && d['getCurrentUser']) d.getCurrentUser().premiumType = 2;
             }

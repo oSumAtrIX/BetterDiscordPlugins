@@ -42,7 +42,9 @@ class NitroEmoteAndScreenShareBypass {
             useFileUpload = false,
             div = document.getElementsByClassName("name-3YKhmS")[0],
             serverName = div != undefined ? div.innerHTML : "noServer",
-            btn = $(".buttonContainer-28fw2U")[1];
+            btnContainer = $(".buttonContainer-28fw2U"),
+            btn = btnContainer[btnContainer.length - 1];
+
         if (btn != null)
             btn.onclick = () => {
                 const checkExist = setInterval(function() {

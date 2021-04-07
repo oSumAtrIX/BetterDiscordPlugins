@@ -7,7 +7,7 @@ class NitroEmoteAndScreenShareBypass {
         return "Send nitro emotes (lame bypass) and enable high quality screen sharing without Nitro";
     }
     getVersion() {
-        return "3.3";
+        return "3.4";
     }
     getAuthor() {
         return "oSumAtrIX";
@@ -27,9 +27,9 @@ class NitroEmoteAndScreenShareBypass {
                         ['']
                     ]
                 ]).cache)) {
-            	if (mdl.exports == undefined) 
-            		continue;
-            	
+                if (mdl.exports == undefined)
+                    continue;
+
                 const d = mdl.exports.default;
                 if (d && d['getCurrentUser']) d.getCurrentUser().premiumType = 2;
             }
@@ -42,13 +42,13 @@ class NitroEmoteAndScreenShareBypass {
             useFileUpload = false,
             div = document.getElementsByClassName("name-3YKhmS")[0],
             serverName = div != undefined ? div.innerHTML : "noServer",
-            btnContainer = $(".buttonContainer-28fw2U"),
+            btnContainer = document.getElementsByClassName("buttons-3JBrkn")[0].children,
             btn = btnContainer[btnContainer.length - 1];
 
         if (btn != null)
             btn.onclick = () => {
                 const checkExist = setInterval(function() {
-                    const scroller = $(".listItems-1uJgMC")[0];
+                    const scroller = document.getElementsByClassName("listItems-1uJgMC")[0];
                     if (scroller == null) return;
                     clearInterval(checkExist);
                     scroller.parentElement.onclick = (e) => {
@@ -64,56 +64,22 @@ class NitroEmoteAndScreenShareBypass {
                                 BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(curChannel, [new File([blob], 'oSumAtrIX.' + ext, blob)]);
                             }
 
-                            var txtBar = $(".textArea-12jD-V")[0];
-                            if (txtBar.children.length != 1) {
-                                url = url + "?size=40";
-                                useFileUpload ?
-                                    fetch(url)
-                                    .then(res => res.blob()).then(upLoad) :
-                                    BdApi.findModuleByProps("sendMessage").sendMessage(curChannel, {
-                                        content: url
-                                    });
-                                return;
-                            }
-
-                            var measuringSpan = document.createElement("span");
-                            measuringSpan.innerText = txtBar.textContent.split(' ').join('M');
-                            measuringSpan.style.display = 'none';
-                            document.body.appendChild(measuringSpan);
-                            var width = $(measuringSpan).width();
-
-                            var img = document.createElement("img");
-                            img.crossOrigin = "Anonymous"
-                            document.body.appendChild(img);
-
-                            var img = document.createElement("img");
-                            img.crossOrigin = "Anonymous"
-                            document.body.appendChild(img);
-                            img.onload = (me) => {
-                                var img = $(me.path[0]);
-                                var canvas = document.createElement('canvas'),
-                                    ctx = canvas.getContext('2d');
-                                canvas.width = img.width() + width + 10;
-                                canvas.crossOrigin = "Anonymous";
-                                canvas.height = 20;
-                                ctx.drawImage(img.get(0), 0, 0);
-                                ctx.font = "16px Whitney";
-                                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                                ctx.drawImage(img.get(0), 0, 0);
-                                ctx.fillStyle = "#DCDDDE";
-                                ctx.fillText(txtBar.textContent, 27, 15);
-                                canvas.toBlob((blob) => {
-                                    upLoad(blob);
-                                    img.remove();
-                                    measuringSpan.remove();
+                            var txtBar = document.getElementsByClassName("textArea-12jD-V")[0];
+                            url = url + "?size=40";
+                            useFileUpload ?
+                                fetch(url)
+                                .then(res => res.blob()).then(upLoad) :
+                                BdApi.findModuleByProps("sendMessage").sendMessage(curChannel, {
+                                    content: url
                                 });
-                            };
 
-                            img.src = url + "?size=20";
+
+
                         }
 
                     }
                 }, 100);
+
             }
     }
 }

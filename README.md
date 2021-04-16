@@ -1,9 +1,11 @@
 # BetterDiscordPlugins
 Proof of concept only, use below plugins
 
->Better VoiceMessage plugin: https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord
+>Better voiceMessage plugin: https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord
 
->Better Emotes plugin: https://github.com/An00nymushun/DiscordFreeEmojis
+>Better emotes plugin: https://github.com/respecting/NitroPerks
+
+>Another better emotes plugin: https://github.com/An00nymushun/DiscordFreeEmojis
 
 Discord: oSumAtrIX#7606
 

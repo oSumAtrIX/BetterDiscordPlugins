@@ -7,7 +7,7 @@ class YTSearch {
         return "Send Youtube Videos by pressing [SHIFT]+[ENTER] while using the following syntax: 'yt [searchterm]'";
     }
     getVersion() {
-        return "2.2";
+        return "2.3";
     }
     getAuthor() {
         return "oSumAtrIX";
@@ -20,7 +20,7 @@ class YTSearch {
         `;
     }
     onSwitch() {
-        const doc = $(".textArea-12jD-V")[0], key = this.getKey();
+        const doc = document.getElementsByClassName("textArea-12jD-V")[0], key = this.getKey();
         if (doc == undefined) return;
         doc.addEventListener('keyup', (e) => {
         	const text = doc.textContent;

@@ -7,7 +7,7 @@ Proof of concept only, use below plugins
 
 >Another better emotes plugin: https://github.com/An00nymushun/DiscordFreeEmojis
 
-Discord: oSumAtrIX#7606
+Discord: https://osumatrix.me/#discord
 
 # How to use the plugins
 1. Get [Better-](https://enhanceddiscord.com) or [Enhanced Discord](https://betterdiscord.net/) and install it

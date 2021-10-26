@@ -7,7 +7,7 @@ class NitroEmoteAndScreenShareBypass {
         return "Send nitro emotes (lame bypass) and enable high quality screen sharing without Nitro";
     }
     getVersion() {
-        return "3.4";
+        return "3.5";
     }
     getAuthor() {
         return "oSumAtrIX";
@@ -16,24 +16,16 @@ class NitroEmoteAndScreenShareBypass {
 
     }
     start() {
+        const mod = BdApi.findModuleByProps("getCurrentUser")
+        let tries;
         const checkExist = setInterval(() => {
-            for (const mdl of Object.values(webpackJsonp.push([
-                    [], {
-                        ['']: (_, e, r) => {
-                            e.cache = r.c
-                        }
-                    },
-                    [
-                        ['']
-                    ]
-                ]).cache)) {
-                if (mdl.exports == undefined)
-                    continue;
-
-                const d = mdl.exports.default;
-                if (d && d['getCurrentUser']) d.getCurrentUser().premiumType = 2;
+            let cUser;
+            if ((cUser = mod.getCurrentUser()) != undefined) {
+                cUser.premiumType = 2;
+                tries = 10;
             }
-            clearInterval(checkExist);
+            if (++tries > 10)
+                clearInterval(checkExist);
         }, 1000);
     }
 
@@ -47,6 +39,7 @@ class NitroEmoteAndScreenShareBypass {
 
         if (btn != null)
             btn.onclick = () => {
+
                 const checkExist = setInterval(function() {
                     const scroller = document.getElementsByClassName("listItems-1uJgMC")[0];
                     if (scroller == null) return;

@@ -17,6 +17,10 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
+
+**BD/ ED Version**
+The version of Better- or EnhancedDiscord which you are using
+
 **Screenshots/ Videos**
 If applicable, add screenshots or videos to help explain your problem.
 

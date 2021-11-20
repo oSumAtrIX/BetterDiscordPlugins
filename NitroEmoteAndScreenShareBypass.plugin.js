@@ -50,7 +50,7 @@ class NitroEmoteAndScreenShareBypass {
                             src = target.firstChild.src;
                         if (src.slice(-7, -4) == "gif" || target.parentElement.parentElement.children[0].firstChild.children[1].innerHTML != serverName) {
                             const curChannel = BdApi.findModuleByProps("getLastSelectedChannelId").getChannelId();
-                            var url = src.slice(0, -4);
+                            var url = src.slice(0, -2);
                             var ext = url.slice(url.length - 3);
 
                             function upLoad(blob) {
@@ -58,7 +58,7 @@ class NitroEmoteAndScreenShareBypass {
                             }
 
                             var txtBar = document.getElementsByClassName("textArea-12jD-V")[0];
-                            url = url + "?size=40";
+                            url = url + "40";
                             useFileUpload ?
                                 fetch(url)
                                 .then(res => res.blob()).then(upLoad) :

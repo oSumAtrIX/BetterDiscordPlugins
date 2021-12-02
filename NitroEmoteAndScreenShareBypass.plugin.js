@@ -1,13 +1,23 @@
-//META{"name":"NitroEmoteAndScreenShareBypass","source":"https://github.com/oSumAtrIX/BetterDiscordPlugins","website":"https://github.com/oSumAtrIX"}*//
+/**
+ * @name NitroEmoteAndScreenShareBypass
+ * @author oSumAtrIX
+ * @authorId 737323631117598811
+ * @version 3.6.1
+ * @description Send Nitro emotes and enable high quality screen sharing without Nitro
+ * @website https://osumatrix.me
+ * @source https://github.com/oSumAtrIX/BetterDiscordPlugins
+ * @updateUrl https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/NitroEmoteAndScreenShareBypass.plugin.js
+ */
+
 class NitroEmoteAndScreenShareBypass {
     getName() {
         return "NitroEmoteAndScreenShareBypass";
     }
     getDescription() {
-        return "Send nitro emotes (lame bypass) and enable high quality screen sharing without Nitro";
+        return "Send Nitro emotes and enable high quality screen sharing without Nitro";
     }
     getVersion() {
-        return "3.5.1";
+        return "3.6.1";
     }
     getAuthor() {
         return "oSumAtrIX";

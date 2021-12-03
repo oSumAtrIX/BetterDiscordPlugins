@@ -1,17 +1,35 @@
+<div align="center">
+
 # BetterDiscordPlugins
-Proof of concept only, use below plugins
 
->Better voiceMessage plugin: https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord
+My collection of plugins for BetterDiscord
+	
+<img src="https://pbs.twimg.com/profile_images/1380391826973147138/L27s7PW9_400x400.jpg" alt="logo" width="300"/>
 
->Better emotes plugin: https://github.com/respecting/NitroPerks
+</div>
 
->Another better emotes plugin: https://github.com/An00nymushun/DiscordFreeEmojis
+# ❓ About
 
-Discord: https://osumatrix.me/#discord
+This repository features my proof of concept plugins. Alternative plugins: 
 
-# How to use the plugins
-1. Get [Better-](https://betterdiscord.net/) or [Enhanced Discord](https://enhanceddiscord.com) and install it
-1. Download the plugins and put them into your plugins folder (For BD it's in AppData/Roaming/BetterDiscord/plugins and for ED its in the same folder as the installer)
-1. Visit the discord settings
-	* If you are using ED, then enable the switch to load BD plugins. ![Image](https://i.imgur.com/BPzTLS4.png)
-1. Restart Discord and enable the plugins in the discord settings > Plugins
+- [Send-Audio](https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord) (Send voice messages)
+
+- [FreeEmojies](https://github.com/An00nymushun/DiscordFreeEmojis) (Free nitro emotes)
+
+- [NitroPerks](https://github.com/SwiftSmoothvZ/NitroPerks-Working-Version-) (Free nitro & screensharing, supported mirror of [respecting/NitroPerk](https://github.com/respecting/NitroPerks))
+
+# 👾 Installation
+
+1. Install [Enhanced Discord](https://enhanceddiscord.com)
+2. Download the plugins into the directory of better discord: `%appdata%/Roaming/BetterDiscord/plugins/`
+3. If required, enable the plugins in `Discord settings > Plugins`
+
+# 📫 Contact
+
+- Discord: https://osumatrix.me/#discord
+
+- E-Mail: https://osumatrix.me/#email
+
+## 📜 License
+
+[GPL3](https://choosealicense.com/licenses/agpl-3.0/)

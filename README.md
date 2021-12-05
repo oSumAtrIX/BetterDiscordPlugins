@@ -21,7 +21,7 @@ This repository features my proof of concept plugins. Alternative plugins:
 # 👾 Installation
 
 1. Install [Enhanced Discord](https://enhanceddiscord.com)
-2. Download the plugins into the directory of better discord: `%appdata%/Roaming/BetterDiscord/plugins/`
+2. Download the plugins into the directory of better discord: `%appdata%/BetterDiscord/plugins/`
 3. If required, enable the plugins in `Discord settings > Plugins`
 
 # 📫 Contact

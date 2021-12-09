@@ -8,7 +8,6 @@
  * @source https://github.com/oSumAtrIX/BetterDiscordPlugins
  * @updateUrl https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/NitroEmoteAndScreenShareBypass.plugin.js
  */
-
 class NitroEmoteAndScreenShareBypass {
     getName() {
         return "NitroEmoteAndScreenShareBypass";
@@ -49,7 +48,6 @@ class NitroEmoteAndScreenShareBypass {
 
         if (btn != null)
             btn.onclick = () => {
-
                 const checkExist = setInterval(function() {
                     const scroller = document.getElementsByClassName("listItems-1uJgMC")[0];
                     if (scroller == null) return;
@@ -58,12 +56,14 @@ class NitroEmoteAndScreenShareBypass {
                         const
                             target = e.target,
                             src = target.firstChild.src;
-                        if (src.slice(-7, -4) == "gif" || target.parentElement.parentElement.children[0].firstChild.children[1].innerHTML != serverName) {
+                        if (src == undefined) return;
+                        let server = target.parentElement.parentElement.children[0].firstChild.children[1] || document.querySelector("div.colorStandard-2KCXvj.size12-3cLvbJ.titleSecondary-3Dh_RZ").children[0];
+                        if (src.slice(-7, -4) == "gif" || server != serverName) {
                             const curChannel = BdApi.findModuleByProps("getLastSelectedChannelId").getChannelId();
                             var url = src.slice(0, -2);
                             var ext = url.slice(url.length - 3);
 
-                            function upLoad(blob) {
+                            function upload(blob) {
                                 BdApi.findModuleByProps("instantBatchUpload").instantBatchUpload(curChannel, [new File([blob], 'oSumAtrIX.' + ext, blob)]);
                             }
 
@@ -71,13 +71,10 @@ class NitroEmoteAndScreenShareBypass {
                             url = url + "40";
                             useFileUpload ?
                                 fetch(url)
-                                .then(res => res.blob()).then(upLoad) :
+                                .then(res => res.blob()).then(upload) :
                                 BdApi.findModuleByProps("sendMessage").sendMessage(curChannel, {
                                     content: url
                                 });
-
-
-
                         }
 
                     }

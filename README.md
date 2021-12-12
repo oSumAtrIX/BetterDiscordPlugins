@@ -18,7 +18,7 @@ This repository features my proof of concept plugins. Alternative plugins:
 
 - [NitroPerks](https://github.com/SwiftSmoothvZ/NitroPerks-Working-Version-) (Free nitro & screensharing, supported mirror of [respecting/NitroPerk](https://github.com/respecting/NitroPerks))
 
-- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search)
+- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search) (PowerCord only)
 
 # 👾 Installation
 

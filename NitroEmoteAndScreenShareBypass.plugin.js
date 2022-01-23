@@ -2,7 +2,7 @@
  * @name NitroEmoteAndScreenShareBypass
  * @author oSumAtrIX
  * @authorId 737323631117598811
- * @version 3.6.3
+ * @version 3.6.4
  * @description Send Nitro emotes and enable high quality screen sharing without Nitro
  * @website https://osumatrix.me
  * @source https://github.com/oSumAtrIX/BetterDiscordPlugins
@@ -16,7 +16,7 @@ class NitroEmoteAndScreenShareBypass {
 		return "Send Nitro emotes and enable high quality screen sharing without Nitro";
 	}
 	getVersion() {
-		return "3.6.3";
+		return "3.6.4";
 	}
 	getAuthor() {
 		return "oSumAtrIX";
@@ -60,7 +60,7 @@ class NitroEmoteAndScreenShareBypass {
 
 						let server = target.parentElement.parentElement.children[0].firstChild.children[1] || document.querySelector("div.colorStandard-21JIj7.size12-oc4dx4.titleSecondary-3hcpuB").children[0];
 						let url = src.slice(0, -19);
-						let ext = url.slice(url.length - 9, -6);
+						let ext = url.split(/[#?]/)[0].split('.').pop().trim();
 						if (ext == "gif" || server != serverName) {
 							const curChannel = BdApi.findModuleByProps("getLastSelectedChannelId").getChannelId();
 							function upload(blob) {

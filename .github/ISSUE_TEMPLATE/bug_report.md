@@ -18,7 +18,7 @@ Steps to reproduce the behavior:
 4. See error
 
 
-**BD/ ED Version**
+**BD Version**
 The version of Better- or EnhancedDiscord which you are using
 
 **Screenshots/ Videos**

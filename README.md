@@ -10,7 +10,7 @@ My collection of plugins for BetterDiscord
 
 # ❓ About
 
-This repository features my proof of concept plugins. Alternative plugins: 
+This repository features my (proof of concept) plugins. Alternative plugins: 
 
 - [NitroBypass](https://github.com/oSumAtrIX/nitro-bypass) (Powercord)
 

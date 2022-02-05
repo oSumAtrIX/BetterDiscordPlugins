@@ -14,13 +14,13 @@ This repository features my proof of concept plugins. Alternative plugins:
 
 - [NitroBypass](https://github.com/oSumAtrIX/nitro-bypass) (for Powercord)
 
-- [Send-Audio](https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord) (Send voice messages)
+- [Send-Audio](https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord) (send voice messages)
 
-- [FreeEmojies](https://github.com/An00nymushun/DiscordFreeEmojis) (Free nitro emotes)
+- [FreeEmojies](https://github.com/An00nymushun/DiscordFreeEmojis) (free nitro emotes)
 
-- [NitroPerks](https://github.com/SwiftSmoothvZ/NitroPerks-Working-Version-) (Free nitro & screensharing, supported mirror of [respecting/NitroPerk](https://github.com/respecting/NitroPerks))
+- [NitroPerks](https://github.com/SwiftSmoothvZ/NitroPerks-Working-Version-) (free nitro & screensharing, supported mirror of [respecting/NitroPerk](https://github.com/respecting/NitroPerks))
 
-- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search) (PowerCord only)
+- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search) (Powercord only)
 
 # 👾 Installation
 

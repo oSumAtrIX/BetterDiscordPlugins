@@ -12,6 +12,8 @@ My collection of plugins for BetterDiscord
 
 This repository features my proof of concept plugins. Alternative plugins: 
 
+- [NitroBypass](https://github.com/oSumAtrIX/nitro-bypass) (for Powercord)
+
 - [Send-Audio](https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord) (Send voice messages)
 
 - [FreeEmojies](https://github.com/An00nymushun/DiscordFreeEmojis) (Free nitro emotes)

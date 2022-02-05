@@ -96,7 +96,7 @@ module.exports = (() => {
                     "Size",
                     "The size of the emotes.",
                     16,
-                    64,
+                    128,
                     this.settings.size,
                     (size) => (this.settings.size = size),
                     {

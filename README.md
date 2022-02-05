@@ -24,7 +24,7 @@ This repository features my (proof of concept) plugins. Alternative plugins:
 
 # 👾 Installation
 
-1. Install [BetterDiscord](https://betterdiscord.net)
+1. Install [BetterDiscord](https://betterdiscord.app)
 2. Download the plugins into the directory of better discord: `%appdata%/BetterDiscord/plugins/`
 3. If required, enable the plugins in `Discord settings > Plugins`
 

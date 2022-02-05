@@ -12,7 +12,7 @@ My collection of plugins for BetterDiscord
 
 This repository features my proof of concept plugins. Alternative plugins: 
 
-- [NitroBypass](https://github.com/oSumAtrIX/nitro-bypass) (for Powercord)
+- [NitroBypass](https://github.com/oSumAtrIX/nitro-bypass) (Powercord)
 
 - [Send-Audio](https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord) (send voice messages)
 
@@ -20,7 +20,7 @@ This repository features my proof of concept plugins. Alternative plugins:
 
 - [NitroPerks](https://github.com/SwiftSmoothvZ/NitroPerks-Working-Version-) (free nitro & screensharing, supported mirror of [respecting/NitroPerk](https://github.com/respecting/NitroPerks))
 
-- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search) (Powercord only)
+- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search) (Powercord)
 
 # 👾 Installation
 

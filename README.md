@@ -12,15 +12,15 @@ My collection of plugins for BetterDiscord
 
 This repository features my (proof of concept) plugins. Alternative plugins: 
 
-- [NitroBypass](https://github.com/oSumAtrIX/nitro-bypass) (Powercord)
+- [Nitro Bypass](https://github.com/oSumAtrIX/nitro-bypass) (Powercord plugin)
 
-- [Send-Audio](https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord) (send voice messages)
+- [Send-Audio](https://github.com/MKSx/Send-Audio-Plugin-BetterDiscord)
 
-- [FreeEmojies](https://github.com/An00nymushun/DiscordFreeEmojis) (free nitro emotes)
+- [FreeEmojis](https://github.com/An00nymushun/DiscordFreeEmojis)
 
-- [NitroPerks](https://github.com/SwiftSmoothvZ/NitroPerks-Working-Version-) (free nitro & screensharing, supported mirror of [respecting/NitroPerk](https://github.com/respecting/NitroPerks))
+- [NitroPerks](https://github.com/SwiftSmoothvZ/NitroPerks-Working-Version-) (Mirror of [respecting/NitroPerk](https://github.com/respecting/NitroPerks))
 
-- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search) (Powercord)
+- [YouTube Search](https://github.com/XeynQ4/powercord-yt-search) (Powercord plugin)
 
 # 👾 Installation
 

@@ -2,7 +2,7 @@
  * @name NitroEmoteAndScreenShareBypass
  * @author oSumAtrIX
  * @authorId 737323631117598811
- * @version 4.0
+ * @version 4.1
  * @description Send Nitro emotes and enable high quality screen sharing without Nitro
  * @website https://osumatrix.me
  * @source https://github.com/oSumAtrIX/BetterDiscordPlugins
@@ -19,9 +19,9 @@ module.exports = (() => {
           github_username: "oSumAtrIX",
         },
       ],
-      version: "4.0",
+      version: "4.1",
       description:
-        "Send Nitro emotes and enable high quality screen sharing without Nitro",
+        "Send Nitro emojis and enable high quality screen sharing without Nitro",
       github: "https://github.com/oSumAtrIX/BetterDiscordPlugins",
       github_raw:
         "https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/NitroEmoteAndScreenShareBypass.plugin.js",
@@ -93,8 +93,8 @@ module.exports = (() => {
                   PluginUtilities.saveSettings(this.getName(), this.settings),
                 ...[
                   new Settings.Slider(
-                    "Size",
-                    "The size of the emotes.",
+                    "Emoji size",
+                    "Chose the size of emojis.",
                     16,
                     64,
                     this.settings.size,
@@ -115,27 +115,27 @@ module.exports = (() => {
                 DiscordModules.MessageActions,
                 "sendMessage",
                 (_, [, message]) => {
-                  const emojies = message.validNonShortcutEmojis;
+                  const emojis = message.validNonShortcutEmojis;
 
-                  emojies.forEach((emoji) => {
-                    // skip discord emojies
+                  emojis.forEach((emoji) => {
+                    // skip discord emojis
                     if (!emoji.require_colons) return;
 
-                    // create the emojie string which we will replace
-                    const emoteString = `<${emoji.animated ? "a" : ""}:${
+                    // create the emoji string which we will replace
+                    const emojiString = `<${emoji.animated ? "a" : ""}:${
                       emoji.name
                     }:${emoji.id}>`;
 
                     let url = emoji.url;
 
-                    // change the size of the emojie in the url
+                    // change the size of the emoji in the url
                     const size = this.settings.size;
                     if (size != 48) {
                       url = url.replace(/\?size=[0-9]+/, `?size=${size}`);
                     }
 
-                    // replace the message containing the emojie with the url
-                    message.content = message.content.replace(emoteString, url);
+                    // replace the message containing the emoji with the url
+                    message.content = message.content.replace(emojiString, url);
                   });
                 }
               );

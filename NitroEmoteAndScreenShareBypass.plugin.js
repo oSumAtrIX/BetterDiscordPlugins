@@ -96,7 +96,7 @@ module.exports = (() => {
                     "Emoji size",
                     "Chose the size of emojis.",
                     16,
-                    64,
+                    128,
                     this.settings.size,
                     (size) => (this.settings.size = size),
                     {

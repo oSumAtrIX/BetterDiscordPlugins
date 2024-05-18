@@ -2,8 +2,8 @@
  * @name NitroEmoteAndScreenShareBypass
  * @author oSumAtrIX
  * @authorId 737323631117598811
- * @version 4.2
- * @description Send Nitro emotes and enable high quality screen sharing without Nitro
+ * @version 4.3
+ * @description Send Nitro emojis and enable high quality screen sharing without Discord Nitro.
  * @website https://osumatrix.me
  * @source https://github.com/oSumAtrIX/BetterDiscordPlugins
  * @updateUrl https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/NitroEmoteAndScreenShareBypass.plugin.js
@@ -21,7 +21,7 @@ module.exports = (() => {
 			],
 			version: "4.2",
 			description:
-				"Send Nitro emojis and enable high quality screen sharing without Nitro",
+				"Send Nitro emojis and enable high quality screen sharing without Discord Nitro",
 			github: "https://github.com/oSumAtrIX/BetterDiscordPlugins",
 			github_raw:
 				"https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/NitroEmoteAndScreenShareBypass.plugin.js",
@@ -109,7 +109,7 @@ module.exports = (() => {
 						}
 
 						onStart() {
-							// spoof client side premium
+							// Spoof client side Discord Nitro.
 							let tries = 1;
 							let intervalId = setInterval(() => {
 								if (++tries > 5) clearInterval(intervalId);
@@ -128,23 +128,23 @@ module.exports = (() => {
 									const emojis = message.validNonShortcutEmojis;
 
 									emojis.forEach((emoji) => {
-										// skip discord emojis
+										// Skip Discord emojis.
 										if (!emoji.require_colons) return;
 
-										// create the emoji string which we will replace
+										// Construct the emoji string in the original message.
 										const emojiString = `<${emoji.animated ? "a" : ""}:${
 											emoji.name
 										}:${emoji.id}>`;
 
-										let url = emoji.url;
+										let url =
+											"https://cdn.discordapp.com/emojis/" +
+											emoji.id +
+											"." +
+											(emoji.animated ? "gif" : "webp") +
+											"?size=" +
+											this.settings.size;
 
-										// change the size of the emoji in the url
-										const size = this.settings.size;
-										if (size != 48) {
-											url = url.replace(/\?size=[0-9]+/, `?size=${size}`);
-										}
-
-										// replace the message containing the emoji with the url
+										// Replace the message containing the emoji string with the URL.
 										message.content = message.content.replace(emojiString, url);
 									});
 								}

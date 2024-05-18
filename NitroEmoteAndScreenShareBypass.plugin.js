@@ -19,9 +19,9 @@ module.exports = (() => {
 					github_username: "oSumAtrIX",
 				},
 			],
-			version: "4.2",
+			version: "4.3",
 			description:
-				"Send Nitro emojis and enable high quality screen sharing without Discord Nitro",
+				"Send Nitro emojis and enable high quality screen sharing without Discord Nitro.",
 			github: "https://github.com/oSumAtrIX/BetterDiscordPlugins",
 			github_raw:
 				"https://raw.githubusercontent.com/oSumAtrIX/BetterDiscordPlugins/master/NitroEmoteAndScreenShareBypass.plugin.js",

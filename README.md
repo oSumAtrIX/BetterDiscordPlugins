@@ -4,7 +4,7 @@
 
 My collection of plugins for BetterDiscord
 	
-<img src="https://pbs.twimg.com/profile_images/1380391826973147138/L27s7PW9_400x400.jpg" alt="logo" width="300"/>
+<img src="https://betterdiscord.app/resources/branding/logo_solid.png" alt="logo" width="300"/>
 
 </div>
 
